@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/edu-bridge.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- font family Roboto -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet">
+<!-- font family Poppins -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> -->
+<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<style>
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .about-meta {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.about .about-title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .about .about-title {
+    font-size: 2rem;
+  }
+}
+
+.about .about-description {
+  margin-bottom: 2rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.about .feature-list-wrapper {
+  margin-bottom: 2rem;
+}
+
+.about .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about .feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.about .feature-list li i {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.about .profile .profile-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about .profile .profile-name {
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: normal;
+}
+
+.about .profile .profile-position {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+.about .contact-info {
+  padding: 1rem 1.5rem;
+  background-color: var(--surface-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+}
+
+.about .contact-info i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.about .contact-info .contact-label {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 0.875rem;
+  margin: 0;
+  line-height: normal;
+}
+
+.about .contact-info .contact-number {
+  font-weight: 600;
+  margin: 0;
+  line-height: normal;
+}
+
+.about .image-wrapper {
+  position: relative;
+}
+.rounded-4{
+  border-radius: 14px;
+}
+
+@media (max-width: 992px) {
+  .about .image-wrapper {
+    padding-left: 0;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about .image-wrapper .images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about .image-wrapper .main-image {
+    margin-left: 0;
+  }
+}
+
+.about .image-wrapper .small-image {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 45%;
+  border: 8px solid var(--surface-color);
+}
+
+@media (max-width: 992px) {
+  .about .image-wrapper .small-image {
+    position: static;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+  }
+}
+
+.about .image-wrapper .experience-badge {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  min-width: 200px;
+  animation: experience-float 3s ease-in-out infinite;
+}
+
+@media (max-width: 992px) {
+  .about .image-wrapper .experience-badge {
+    position: static;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}
+
+.about .image-wrapper .experience-badge h3 {
+  color: var(--contrast-color);
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 0.5;
+}
+
+.about .image-wrapper .experience-badge h3 span {
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.about .image-wrapper .experience-badge p {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+  line-height: normal;
+}
+
+@keyframes experience-float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.max-w-800{
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+  text-align: center;
+    padding: 80px 20px;
+    transition: border ease-in-out 0.3s;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 44px -20px rgba(0, 0, 0, 0.15);
+    border-radius: 39px;
+}
+
+.services .service-item a{
+    text-decoration: none;
+}
+
+.services .service-item .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--primary-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  color: white;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.services .service-item .icon i {
+  color: #ffffff;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  transition: 0.3s;
+  line-height: normal;
+  color: var(--primary-color);
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .service-item:hover {
+  border-color: var(--primary-color);
+}
+
+.services .service-item:hover h3 {
+  color: var(--primary-color);
+}
+.process-banner{
+  background-image: url('/images/process-banner.jpg');
+
+}
+</style>
+</head>
+<body>
+  <header class="bg-white header-fixed fixed-top" id="header">
+    <nav class="navbar navbar-expand-lg px-2">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="index.html">
+                <img src="./images/EduBridge-logo.png" width="300" class="img-cover" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-three-dots-vertical"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active-menu" aria-current="page" href="process.html">Application Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offering.html">Offering</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ProfessionalCV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blogs.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about-us.html">About Us</a>
+                    </li>
+                </ul>
+                <div>
+                    <a type="button" class="btn btn-primary" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+ <!-- Banner section -->
+ <section class="banner-section">
+  <div class="process-banner banner-bg-content inner-page-banner">
+    <div class="banner-content p-2">
+      <h1 class="mb-5">Start Your Study Abroad Journey</h1>
+      <p class="sub-title">Our mission: to make your journey to studying abroad seamless and successful.</p>
+      <!-- <div class="banner-btn-group">
+          <button type="button" class="btn btn-primary">Apply Now <i class="bi bi-arrow-right"></i></button>
+          <button type="button" class="btn btn-primary">Explore Courses <i class="bi bi-arrow-right"></i></button>
+      </div> -->
+      <div class="page-name-banner">
+        APPLICATON PROCESS
+      </div>
+  </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about section pt-80 pb-3">
+
+        <!-- Section Title -->
+  <div class="container section-title pb-5" data-aos="fade-up">
+    <h2 class="text-primary">Our process</h2>
+    <p class="">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velitNecessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velitNecessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div><!-- End Section Title -->
+    
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+    
+            <div class="row gy-4 align-items-center justify-content-between">
+    
+                <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                    <span class="about-meta">STEPS</span>
+                    <h2 class="about-title">The EduBridge Application Process</h2>
+                    <p class="about-description">Embarking on your study abroad journey involves a few essential steps. Start by researching and shortlisting universities and programs that align with your goals. Check the eligibility requirements and gather necessary documents.</p>
+    
+                    <div class="row feature-list-wrapper">
+                        <div class="col-md-6">
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Research and Shortlist Programs</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Check Eligibility Requirements</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Gather Required Documents</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill"></i> Take Required Tests</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Write and Submit Applications</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Apply for a Student Visa</li>
+                            </ul>
+                        </div>
+                    </div>
+  
+                </div>
+    
+                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="image-wrapper">
+                        <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
+                            <img src="assets/img/application-process.jpg" alt="Business Meeting"
+                                class="img-fluid main-image rounded-4">
+                            
+                        </div>
+                        <div class="experience-badge floating">
+                            <h3>15+ <span>Years</span></h3>
+                            <p>Of experience in business service</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section><!-- /About Section -->
+
+  <!-- Services Section -->
+  <section id="services" class="services section pt-80 pb-80">
+
+    <!-- Section Title -->
+    <div class="container section-title text-center" data-aos="fade-up">
+      <h2>Steps for Application Process</h2>
+      <p>Embarking on your study abroad journey involves a few essential steps.</p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon">
+              1
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Research and Shortlist Programs</h3>
+            </a>
+            <p>Explore universities and programs that align with your academic interests, career goals, and budget.</p>
+            <span><strong>Tips:</strong> Consider location, course curriculum, ranking, and eligibility requirements. </span>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon">
+              2
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Check Eligibility Requirements</h3>
+            </a>
+            <p>Review the academic qualifications, language proficiency tests (e.g., IELTS/TOEFL), and specific prerequisites required by your chosen program.</p>
+            <span><strong>Tips: </strong>Make a checklist to ensure you meet all requirements.</span>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon">
+              3
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Gather Required Documents</h3>
+            </a>
+            <p>Prepare essential documents, including:</p>
+            <p><span>Academic transcripts, </span><span>Statement of Purpose (SOP), </span>
+              <span>Letters of Recommendation (LOR), </span>
+              <span>Passport copy</span>
+            </p>
+            <span><strong>Tips: </strong>Ensure documents are accurate and updated</span>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon">
+              4
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Take Required Tests</h3>
+            </a>
+            <p>Complete standardized tests like GRE, GMAT, IELTS, or TOEFL as required by your program.</p>
+            <span><strong>Tips: </strong>Register early, prepare with practice tests, and schedule your exams in advance.</span>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item position-relative">
+            <div class="icon">
+              5
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Write and Submit Applications</h3>
+            </a>
+            <p>Create compelling applications tailored to each university. Include your SOP, CV/Resume, and required documents. Submit the applications before deadlines.</p>
+            <span><strong>Tips: </strong>Proofread carefully and double-check submission details.</span>
+          </div>
+        </div><!-- End Service Item -->
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              6
+            </div>
+            <a href="" class="stretched-link">
+              <h3>Apply for a Student Visa</h3>
+            </a>
+            <p>Start your visa application with required documents such as:</p>
+            <p>Proof of admission, 
+              Financial documents, 
+              Passport photos</p>
+              <span><strong>Tips: </strong>Follow embassy guidelines and attend interviews if required.</span>
+          </div>
+        </div><!-- End Service Item -->
+
+      </div>
+
+    </div>
+
+  </section><!-- /Services Section -->
+
+  <footer class="bg-primary">
+    <div class="footer-wrapper container">
+        <div class="footer-logo">
+            <img src="./images/EduBridge-white-logo.png" class="w-100" alt="">
+        </div>
+        <div class="row text-white">
+            <div class="col-lg-4 contact-us-section">
+                <h6>Contact Us</h6>
+                <div class="d-flex gap-3 mb-3">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Navakethan Complex,
+                        6th Floor, 605, 606 A&P opp,
+                        CLock Tower, Telangana
+                        500003</span>
+                </div>
+                <div class="d-flex gap-3 mb-3">
+                    <i class="bi bi-envelope-fill"></i>
+                    <span>info@ezyskills.in</span>
+                </div>
+                <div class="d-flex gap-3 mb-3">
+                    <i class="bi bi-telephone-fill"></i>
+                    <span>+91 8428448903 <br> +91 9475484959</span>
+                </div>
+            </div>
+            <div class="col-lg-2 quick-links">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Our Collaborations</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 quick-links">
+                <h6>Pages</h6>
+                <ul>
+                    <li><a href="">Course Selector</a></li>
+                    <li><a href="">Courses</a></li>
+                    <li><a href="">Pricing</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 social-and-newsletter">
+                <h6>Social Media</h6>
+                <div class="social-links">
+                    <a href=""><img src="./images/facebook.png" alt=""></a>
+                    <a href=""><img src="./images/instagram.png" alt=""></a>
+                    <a href=""><img src="./images/twitter.png" alt=""></a>
+                    <a href=""><img src="./images/youtube.png" alt=""></a>
+                </div>
+                <span class="news-letter-title mb-3">Subscribe Newsletter & get</span>
+                <div class="news-letter-field">
+                    <i class="bi bi-envelope-fill"></i>
+                    <input type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary"><i class="bi bi-send-fill me-2"></i> Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright container">
+        <p>Copyright © 2024 Learning Agency | All Rights Reserved | <a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a></p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+<!-- Vendor JS Files -->
+<!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+<!-- Main JS File -->
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
