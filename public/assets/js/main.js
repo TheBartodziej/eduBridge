@@ -22,6 +22,39 @@
   window.addEventListener('load', toggleScrolled);
 
   /**
+   * Offering descriptions show below cards
+   */
+
+  function onShowOfferingDetails() {
+    let buttons = document.querySelectorAll('[data-action="showOfferingDetail"]');
+    let detailSection = document.getElementById('details-section');
+    let detailTitle = document.getElementById('details-title');
+    let detailImage = document.getElementById('details-img');
+    let detailDescription = document.getElementById('details-description');
+
+    detailSection.classList.add('d-none');
+    buttons.forEach((button, index) => {
+      button.addEventListener('click',() => {
+        let itemCard = button.closest('.section-card');
+        let itemImg = itemCard.querySelector('img').src;
+        let itemTitle = itemCard.querySelector('h3').innerText;
+        let itemDescription = itemCard.querySelector('p').innerText;
+
+        detailTitle.innerText = itemTitle;
+        detailImage.src = itemImg;
+        detailDescription.innerText = itemDescription;
+        detailSection.classList.remove('d-none');
+
+        setTimeout(()=>{
+          detailSection.scrollIntoView({behavior:'smooth'})
+        },500)
+
+      })
+    })
+  }
+
+  window.addEventListener('load', onShowOfferingDetails);
+  /**
    * Mobile nav toggle
    */
   // const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');

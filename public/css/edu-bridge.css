@@ -87,6 +87,12 @@ p{
     border-radius: 39px;
     padding: 48px;
 }
+.ellipsis-3{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 @media (max-width:768px) {
 
     h1{
@@ -105,9 +111,9 @@ p{
         line-height: 48px;
     }
     h4{
-        font-size: 32px;
+        font-size: 26px;
         font-weight: 600;
-        line-height: 56px;
+        line-height: 42px;
         letter-spacing: 1px;
     }
     
@@ -506,6 +512,19 @@ header .navbar-nav .nav-link{
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.offering-description-wrapper #details-img{
+    max-width: 500px;
+    border-radius: 10px;
+    float: right;
+    min-height: 270px;
+    object-fit: cover;
+    margin: 40px;
+}
+.clearfix:after {
+    content:"";
+    display:block;
+    clear:both;
+   }
 
 /*End of start of offering page styles */
 
@@ -515,5 +534,10 @@ header .navbar-nav .nav-link{
     }
     .hiw-steps-wrapper .step-jobseeker.icon-before{
         margin-top: 50px;
+    }
+    .offering-description-wrapper #details-img{
+        float: none;
+        margin: auto;
+        margin-bottom: 20px;
     }
 }
