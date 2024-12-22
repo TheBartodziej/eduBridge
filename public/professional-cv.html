@@ -328,6 +328,22 @@
   background-image: url('/images/about-banner.jpg');
 
 }
+.client-logs-wrapper{
+  display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+.client-logs-wrapper .logo-item {
+    max-width: 124px;
+}
+.client-logs-wrapper .logo-item img{
+  cursor: pointer;
+  transition: 0.288s ease all;
+}
+.client-logs-wrapper .logo-item img:hover{
+  transform: scale(1.2);
+}
 </style>
 </head>
 <body>
@@ -425,53 +441,29 @@
   <!-- Section Title -->
 <div class="container section-title text-center" data-aos="fade-up">
   <h2>We helped our customers get to the top firms</h2>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At non quo perferendis.</p>
 </div><!-- End Section Title -->
 
   <div class="container pt-5" data-aos="fade-up" data-aos-delay="100">
 
-    <div class="swiper init-swiper">
-      <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          
-          "breakpoints": {
-            "320": {
-              "slidesPerView": 2,
-              "spaceBetween": 40
-            },
-            "480": {
-              "slidesPerView": 3,
-              "spaceBetween": 60
-            },
-            "640": {
-              "slidesPerView": 4,
-              "spaceBetween": 80
-            },
-            "992": {
-              "slidesPerView": 6,
-              "spaceBetween": 120
-            }
-          }
-        }
-      </script>
-      <div class="swiper-wrapper align-items-center">
-        <div class="swiper-slide"><img src="assets/img/clients/google-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/amazon-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/jp-morgan-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/rothschild-logo-svg-vector.svg" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/Deloitte-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/Accenture-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/p&g-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/visa-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/Santander-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/Jeffries-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/ING-logo.png" class="img-fluid" alt=""></div>
-        <div class="swiper-slide"><img src="assets/img/clients/volkswagen-logo.png" class="img-fluid" alt=""></div>
+    <div class="swiper init-logos">
+     
+      <div class="client-logs-wrapper align-items-center">
+        <div class="logo-item"><img src="assets/img/clients/google-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/amazon-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/jp-morgan-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/rothschild-logo-svg-vector.svg" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/Deloitte-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/Accenture-logo.png" class="img-fluid" alt=""></div>
+        
+      </div>
+      <div class="client-logs-wrapper align-items-center">
+        <div class="logo-item"><img src="assets/img/clients/p&g-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/visa-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/Santander-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/Jeffries-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/ING-logo.png" class="img-fluid" alt=""></div>
+        <div class="logo-item"><img src="assets/img/clients/volkswagen-logo.png" class="img-fluid" alt=""></div>
       </div>
       <div class="swiper-pagination"></div>
     </div>
