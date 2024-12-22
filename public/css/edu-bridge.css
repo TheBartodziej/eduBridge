@@ -297,6 +297,7 @@ header .navbar-nav .nav-link{
     gap: 22px;
     position: relative;
     align-items: center;
+    text-decoration: none;
 }
 
 .hiw-steps-list .hiw-steps h5{
@@ -540,4 +541,8 @@ header .navbar-nav .nav-link{
         margin: auto;
         margin-bottom: 20px;
     }
+}
+
+.steps-wrapper{
+    scroll-margin-top: 100px;
 }
