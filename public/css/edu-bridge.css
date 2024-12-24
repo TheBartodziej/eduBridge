@@ -39,7 +39,7 @@ body{
 h1{
     font-size: 66px;
     font-weight: 800;
-    line-height: 44px;
+    line-height: 70px;
 }
 h2{
     font-size: 38px;
@@ -96,19 +96,19 @@ p{
 @media (max-width:768px) {
 
     h1{
-        font-size: 58px;
+        font-size: 50px;
         font-weight: 800;
-        line-height: 64px;
+        line-height: 57px;
     }
     h2{
-        font-size: 46px;
+        font-size: 37px;
         font-weight: 700;
-        line-height: 59px;
+        line-height: 50px;
     }
     h3{
-        font-size: 36px;
+        font-size: 30px;
         font-weight: 700;
-        line-height: 48px;
+        line-height: 43px;
     }
     h4{
         font-size: 26px;
@@ -119,6 +119,11 @@ p{
     
     .section-card{
         padding: 58px 20px;
+    }
+    .banner-section .banner-content .banner-btn-group{
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
     }
 }
 
@@ -160,7 +165,7 @@ header .navbar-nav .nav-link{
     padding-top: 4rem;
 }
 .banner-bg-content{
-  background-image: url('../images/banner-img.png');
+  background-image: url('/images/landing-banner.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -185,7 +190,11 @@ header .navbar-nav .nav-link{
     justify-content: center;
     align-items: center;
     height: 100%;
-   
+    text-align: center;
+}
+
+.banner-section .banner-content h1{
+    max-width: 1060px;
 }
 
 .banner-section .sub-title{
@@ -200,6 +209,7 @@ header .navbar-nav .nav-link{
     gap: 45px;
     flex-wrap: wrap;
 }
+
 
 /* Support section */
 .support-section .section-card-content{
@@ -342,6 +352,13 @@ header .navbar-nav .nav-link{
 
 
 /* Respresentative section */
+.respresentative-section .card-img{
+    border-radius: 16px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
 .respresentative-section .grid-lists{
     max-width: 560px;
 }
@@ -498,7 +515,7 @@ header .navbar-nav .nav-link{
 }
 /* start of offering page styles */
 .offering-banner{
-  background-image: url('../images/offering-banner.jpg');
+  background-image: url('/images/offering-banner-new.jpg');
 }
 .offering-list{
     display: grid;
