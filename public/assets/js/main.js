@@ -32,7 +32,7 @@
     let detailImage = document.getElementById('details-img');
     let detailDescription = document.getElementById('details-description');
 
-    detailSection.classList.add('d-none');
+    detailSection?.classList.add('d-none');
     buttons.forEach((button, index) => {
       button.addEventListener('click',() => {
         let itemCard = button.closest('.section-card');
@@ -43,10 +43,10 @@
         detailTitle.innerText = itemTitle;
         detailImage.src = itemImg;
         detailDescription.innerText = itemDescription;
-        detailSection.classList.remove('d-none');
+        detailSection?.classList.remove('d-none');
 
         setTimeout(()=>{
-          detailSection.scrollIntoView({behavior:'smooth'})
+          detailSection?.scrollIntoView({behavior:'smooth'})
         },500)
 
       })

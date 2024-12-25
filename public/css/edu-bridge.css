@@ -498,16 +498,9 @@ header .navbar-nav .nav-link{
   background: #253669;
   padding: 10px 16px;
   position: relative;
+  border-radius: 5px;
 }
-.page-name-banner:before {
-  content: "";
-  position: absolute;
-  height: calc(100% - 8px);
-  width: calc(100% - 8px);
-  left: 4px;
-  top: 4px;
-  border: 1px dashed;
-}
+
 .active-menu{
   background: #97b9e0;
     color: #253669 !important;
@@ -557,6 +550,10 @@ header .navbar-nav .nav-link{
         float: none;
         margin: auto;
         margin-bottom: 20px;
+    }
+    .navbar-collapse{
+      background: white;
+      padding: 10px 13px;
     }
 }
 
