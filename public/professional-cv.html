@@ -267,24 +267,30 @@
 --------------------------------------------------------------*/
 .call-to-action {
   padding: 80px 0;
-  position: relative;
-  clip-path: inset(0);
+    position: relative;
+    clip-path: inset(0);
+    /* min-height: 30rem; */
+    /* margin: 60px auto; */
+    border-radius: 39px;
+    overflow: hidden;
+     /* background: #253669; */
 }
 
 .call-to-action img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: 1; */
+    opacity: 0;
 }
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 50%); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -298,7 +304,7 @@
 .call-to-action h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .call-to-action p {
@@ -312,17 +318,18 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 40px;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  text-decoration: none;
+    /* border: 2px solid #ffffff; */
+    color: #ffffff;
+    text-decoration: none;
+    background: #253669;
 }
 
-.call-to-action .cta-btn:hover {
+/* .call-to-action .cta-btn:hover {
   border: 2px solid #ffffff;
-}
+} */
 
 .professiocal-cv-banner{
   background-image: url('/images/prof-cv-banner.jpeg');
@@ -474,11 +481,11 @@
 </section><!-- /Clients Section -->
 
 <!-- Call To Action Section -->
-<section id="call-to-action" class="call-to-action section dark-background">
+<section id="call-to-action" class="call-to-action section container dark-background">
 
   <img src="assets/img/cta-bg.jpg" alt="">
 
-  <div class="container">
+  <div class="container-div position-relative">
     <div class="row justify-content-center">
       <div class="col-xl-10">
         <div class="text-center">
@@ -491,69 +498,31 @@
 
 </section><!-- /Call To Action Section -->
 
-  <footer class="bg-primary">
-    <div class="footer-wrapper container">
-        <div class="footer-logo">
-            <img src="./images/EduBridge-white-logo.png" class="w-100" alt="">
-        </div>
-        <div class="row text-white">
-            <div class="col-lg-4 contact-us-section">
-                <h6>Skontaktuj się z nami</h6>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Navakethan Complex,
-                        6th Floor, 605, 606 A&P opp,
-                        CLock Tower, Telangana
-                        500003</span>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span>info@ezyskills.in</span>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-telephone-fill"></i>
-                    <span>+91 8428448903 <br> +91 9475484959</span>
-                </div>
-            </div>
-            <div class="col-lg-2 quick-links">
-                <h6>Quick Links</h6>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Our Collaborations</a></li>
-                    <li><a href="">Skontaktuj się z nami</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 quick-links">
-                <h6>Pages</h6>
-                <ul>
-                    <li><a href="">Course Selector</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 social-and-newsletter">
-                <h6>Social Media</h6>
-                <div class="social-links">
-                    <a href=""><img src="./images/facebook.png" alt=""></a>
-                    <a href=""><img src="./images/instagram.png" alt=""></a>
-                    <a href=""><img src="./images/twitter.png" alt=""></a>
-                    <a href=""><img src="./images/youtube.png" alt=""></a>
-                </div>
-                <span class="news-letter-title mb-3">Subscribe Newsletter & get</span>
-                <div class="news-letter-field">
-                    <i class="bi bi-envelope-fill"></i>
-                    <input type="text" placeholder="Your email">
-                    <button type="button" class="btn btn-primary"><i class="bi bi-send-fill me-2"></i> Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright container">
-        <p>EduBridge © 2024 | Wszystkie prawa zastrzeżone |  <a href="terms-condition.html">Regulamin</a> | <a href="privacy-policy.html">Polityka Prywatności</a></p>
-    </div>
+<footer class="bg-primary">
+  <div class="footer-wrapper container">
+      <div class="footer-logo">
+          <img src="./images/EduBridge-white-logo.png" class="w-100" alt="">
+      </div>
+      <div class="row text-white">
+        
+          <div class="col-lg-12 quick-links">
+              <h6>Quick Links</h6>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="process.html">Proces Aplikacyjny</a></li>
+                  <li><a href="offering.html">Usługi</a></li>
+                  <li><a href="professional-cv.html">Profesjonalne CV</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="blogs.html">Blog</a></li>
+                  <li><a href="about-us.html">O nas</a></li>
+                  <li><a href="contact.html">Skontaktuj się z nami</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="footer-copyright container">
+      <p>EduBridge © 2024 | Wszystkie prawa zastrzeżone |  <a href="terms-condition.html">Regulamin</a> | <a href="privacy-policy.html">Polityka Prywatności</a></p>
+  </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

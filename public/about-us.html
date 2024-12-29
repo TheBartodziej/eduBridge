@@ -259,7 +259,7 @@
 --------------------------------------------------------------*/
 .services .service-item {
   text-align: center;
-    padding: 80px 20px;
+    padding: 40px 20px;
     transition: border ease-in-out 0.3s;
     height: 100%;
     background: #FFFFFF;
@@ -272,9 +272,8 @@
 }
 
 .services .service-item .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
+  width: 94px;
+  height: 94px;
   background: var(--primary-color);
   border-radius: 4px;
   display: flex;
@@ -282,23 +281,30 @@
   justify-content: center;
   margin-bottom: 20px;
   transition: 0.3s;
+  overflow: hidden;
+  padding: 5px;
+  margin: auto;
 }
 
-.services .service-item .icon i {
-  color: #ffffff;
-  font-size: 28px;
+.services .service-item .icon img {
+  width: 100%;
+  border-radius: 4px;
   transition: ease-in-out 0.3s;
 }
 
 .services .service-item h3 {
   font-weight: 700;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 5px 0;
   font-size: 22px;
   transition: 0.3s;
   line-height: normal;
   color: var(--primary-color);
 }
-
+.services .service-item small{
+  margin-bottom: 12px;
+  opacity: 0.7;
+  display: block;
+}
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
@@ -352,24 +358,30 @@
 --------------------------------------------------------------*/
 .call-to-action {
   padding: 80px 0;
-  position: relative;
-  clip-path: inset(0);
+    position: relative;
+    clip-path: inset(0);
+    /* min-height: 30rem; */
+    /* margin: 60px auto; */
+    border-radius: 39px;
+    overflow: hidden;
+     /* background: #253669; */
 }
 
 .call-to-action img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* z-index: 1; */
+    opacity: 0;
 }
 
 .call-to-action:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 50%);
+  /* background: color-mix(in srgb, var(--background-color), transparent 50%); */
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -383,7 +395,7 @@
 .call-to-action h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .call-to-action p {
@@ -397,16 +409,13 @@
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 40px;
-  border-radius: 5px;
+  border-radius: 6px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.call-to-action .cta-btn:hover {
-  border: 2px solid #ffffff;
+    /* border: 2px solid #ffffff; */
+    color: #ffffff;
+    text-decoration: none;
+    background: #253669;
 }
 </style>
 </head>
@@ -471,10 +480,66 @@
     <section id="about" class="about section pt-80 pb-80">
         <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="text-primary">Kim jesteśmy?</h2>
-        <p class="">EduBridge to zespół ekspertów, który wspiera studentów i profesjonalistów w realizacji ich edukacyjnych i zawodowych ambicji. Naszą misją jest ułatwianie dostępu do najlepszych uczelni i firm, tworząc indywidualne strategie aplikacyjne i rozwijając potencjał naszych klientów.</p>
+        <h2 class="text-primary">Poznaj ekspertów, którzy stoją za Twoim sukcesem</h2>
+        <p class="">EduBridge to zespół doświadczonych specjalistów, który wspiera studentów i profesjonalistów w realizacji ich edukacyjnych i zawodowych ambicji. Naszą misją jest ułatwianie dostępu do najlepszych uczelni i firm, tworząc spersonalizowane strategie aplikacyjne i rozwijając potencjał naszych klientów</p>
       </div><!-- End Section Title -->
     </section><!-- /About Section -->
+
+
+<!-- Services Section -->
+<section id="services" class="services section pb-80">
+  <div class="container">
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <img src="./images/Bartosz Kaliszewski.JPG">
+          </div>
+          <a href="" class="stretched-link">
+            <h3>Bartosz Kaliszewski</h3>
+          </a>
+          <small>Założyciel i Kierownik ds. Strategii Rekrutacyjnych </small>
+          <p>
+            Absolwent London School of Economics z wyróżnieniem za pracę magisterską. Założyciel EduBridge i ekspert ds. procesów aplikacyjnych. Doświadczenie zdobyte w globalnych firmach, takich jak Google i Accenture, pozwala mu wnieść unikalne spojrzenie do każdego projektu.
+          </p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <img src="./images/Piotr Miszczuk.jpg" alt="">
+          </div>
+          <a href="" class="stretched-link">
+            <h3>Piotr Miszczuk</h3>
+          </a>
+          <small>Główny Ekspert Językowy i Kierownik Zespołu Lingwistycznego </small>
+          <p>Doktorant Uniwersytetu Warszawskiego, potrójny magister oraz doświadczony lingwista. Na co dzień pracuje również jako reporter  w anglojęzycznej stacji telewizyjnej TVP World, jego wszechstronność sprawia, że procesy językowe w EduBridge są na najwyższym poziomie.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon">
+            <img src="./images/Adrianna Grabowska.jpg">
+          </div>
+          <a href="" class="stretched-link">
+            <h3>Adrianna Grabowska</h3>
+          </a>
+          <small>Koordynatorka Programu i Procesów Aplikacyjnych</small>
+          <p>
+            Odpowiada za organizację pracy oraz terminowość w realizacji aplikacji. Jest kluczową osobą w zarządzaniu harmonogramami, dzięki czemu klienci mogą skupić się na swoich celach, mając pewność, że proces aplikacyjny przebiega sprawnie i profesjonalnie.
+          </p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section>
+<!-- /Services Section -->
 
     <!-- About Author Section -->
     <section id="about" class="about section pt-80 pb-80 _about-us-section bg-white">
@@ -482,7 +547,7 @@
     
         <div class="row gy-4 justify-content-between">
 
-            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-xl-12" data-aos="fade-up" data-aos-delay="200">
               <div class="d-flex justify-content-between align-items-center flex-wrap">
                 <div>
                   <h2 class="about-title text-primary">EduBridge's Story</h2>
@@ -493,131 +558,27 @@
                 </div>
                 
               </div>
-                <p class="about-description">Pomysł na stworzenie <b>EduBridge</b> zrodził się z osobistych doświadczeń. Kiedy sam aplikowałem na studia za granicą, zauważyłem, jak trudno znaleźć przystępną i skuteczną pomoc w tym wymagającym procesie. Aplikowałem na London School of Economics, które było moim największym marzeniem – do tego stopnia, że postanowiłem aplikować wyłącznie na tę uczelnię. To doświadczenie uświadomiło mi, jak ogromnego wysiłku wymaga stworzenie idealnej aplikacji i jak kluczowa jest dbałość o każdy szczegół.</p>
+                <p class="about-description">Pomysł na stworzenie EduBridge zrodził się z osobistych doświadczeń. Kiedy sam aplikowałem na studia za granicą, zauważyłem, jak trudno znaleźć przystępną i skuteczną pomoc w tym wymagającym procesie. Aplikowałem na London School of Economics, które było moim największym marzeniem – do tego stopnia, że postanowiłem aplikować wyłącznie na tę uczelnię. To doświadczenie uświadomiło mi, jak ogromnego wysiłku wymaga stworzenie idealnej aplikacji i jak kluczowa jest dbałość o każdy szczegół.</p>
                 <p>To właśnie to podejście leży u podstaw działalności EduBridge. Każdą aplikację traktujemy z pełnym zaangażowaniem i troską, aby maksymalnie zwiększyć szanse na sukces. Nasz zespół składa się z doświadczonych ekspertów, którzy mają za sobą setki godzin pracy nad aplikacjami na prestiżowe uczelnie i do wiodących firm na całym świecie. Rekrutacja to nasza pasja – łączymy wiedzę, doświadczenie i indywidualne podejście, aby pomagać naszym klientom osiągać ich cele. Dołącz do grona naszych klientów i rozpocznij swoją drogę do wymarzonej przyszłości!</p>
-            </div>
-
-            <div class="col-xl-5 pt-5" data-aos="fade-up" data-aos-delay="300">
-               
-              <img src="/images/LSE logo.png" width="290" alt="" style="max-width: 100%;">             
-                <div class="profile d-flex align-items-center gap-3 pt-4">
-                  <img src="/images/Founder picture.JPG" alt="CEO Profile" class="profile-image">
-                  <div>
-                      <h4 class="profile-name">Mario Smith</h4>
-                      <p class="profile-position">CEO &amp; Founder @ EduBridge</p>
-                  </div>
-              </div>
             </div>
         </div>
 
     </div>
     </section><!-- /About Author Section -->
 
-  <!-- Services Section -->
-  <section id="services" class="services section pt-80 pb-80">
-
-    <!-- Section Title -->
-    <div class="container section-title text-center" data-aos="fade-up">
-      <h2>Our shared Values</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-    </div><!-- End Section Title -->
-
-    <div class="container">
-
-      <div class="row gy-4">
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-activity"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Nesciunt Mete</h3>
-            </a>
-            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-broadcast"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Eosle Commodi</h3>
-            </a>
-            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-easel"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Ledo Markt</h3>
-            </a>
-            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-bounding-box-circles"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Asperiores Commodit</h3>
-            </a>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-            <a href="" class="stretched-link"></a>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-calendar4-week"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Velit Doloremque</h3>
-            </a>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-            <a href="" class="stretched-link"></a>
-          </div>
-        </div><!-- End Service Item -->
-
-        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-item position-relative">
-            <div class="icon">
-              <i class="bi bi-chat-square-text"></i>
-            </div>
-            <a href="" class="stretched-link">
-              <h3>Dolori Architecto</h3>
-            </a>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-            <a href="" class="stretched-link"></a>
-          </div>
-        </div><!-- End Service Item -->
-
-      </div>
-
-    </div>
-
-  </section><!-- /Services Section -->
+  
 
 <!-- Call To Action Section -->
-<section id="call-to-action" class="call-to-action section dark-background">
+<section id="call-to-action" class="call-to-action container section dark-background">
 
   <img src="assets/img/cta-bg.jpg" alt="">
 
-  <div class="container">
+  <div class="container-div">
     <div class="row justify-content-center">
       <div class="col-xl-10">
         <div class="text-center">
-          <h3>Zrób pierwszy krok w kierunku swojej wymarzonej kariery</h3>
-          <a class="cta-btn" href="contact.html">Zamów swoje profesjonalne CV</a>
+          <h3>Rozpocznij swoją podróż z EduBridge</h3>
+          <a class="cta-btn" href="contact.html">Umów się na konsultację</a>
         </div>
       </div>
     </div>
@@ -625,69 +586,31 @@
 
 </section><!-- /Call To Action Section -->
 
-  <footer class="bg-primary">
-    <div class="footer-wrapper container">
-        <div class="footer-logo">
-            <img src="./images/EduBridge-white-logo.png" class="w-100" alt="">
-        </div>
-        <div class="row text-white">
-            <div class="col-lg-4 contact-us-section">
-                <h6>Skontaktuj się z nami</h6>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Navakethan Complex,
-                        6th Floor, 605, 606 A&P opp,
-                        CLock Tower, Telangana
-                        500003</span>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-envelope-fill"></i>
-                    <span>info@ezyskills.in</span>
-                </div>
-                <div class="d-flex gap-3 mb-3">
-                    <i class="bi bi-telephone-fill"></i>
-                    <span>+91 8428448903 <br> +91 9475484959</span>
-                </div>
-            </div>
-            <div class="col-lg-2 quick-links">
-                <h6>Quick Links</h6>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Our Collaborations</a></li>
-                    <li><a href="">Skontaktuj się z nami</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2 quick-links">
-                <h6>Pages</h6>
-                <ul>
-                    <li><a href="">Course Selector</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Pricing</a></li>
-                    <li><a href="">FAQ</a></li>
-                    <li><a href="">Blogs</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4 social-and-newsletter">
-                <h6>Social Media</h6>
-                <div class="social-links">
-                    <a href=""><img src="./images/facebook.png" alt=""></a>
-                    <a href=""><img src="./images/instagram.png" alt=""></a>
-                    <a href=""><img src="./images/twitter.png" alt=""></a>
-                    <a href=""><img src="./images/youtube.png" alt=""></a>
-                </div>
-                <span class="news-letter-title mb-3">Subscribe Newsletter & get</span>
-                <div class="news-letter-field">
-                    <i class="bi bi-envelope-fill"></i>
-                    <input type="text" placeholder="Your email">
-                    <button type="button" class="btn btn-primary"><i class="bi bi-send-fill me-2"></i> Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright container">
-        <p>EduBridge © 2024 | Wszystkie prawa zastrzeżone |  <a href="terms-condition.html">Regulamin</a> | <a href="privacy-policy.html">Polityka Prywatności</a></p>
-    </div>
+<footer class="bg-primary">
+  <div class="footer-wrapper container">
+      <div class="footer-logo">
+          <img src="./images/EduBridge-white-logo.png" class="w-100" alt="">
+      </div>
+      <div class="row text-white">
+        
+          <div class="col-lg-12 quick-links">
+              <h6>Quick Links</h6>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="process.html">Proces Aplikacyjny</a></li>
+                  <li><a href="offering.html">Usługi</a></li>
+                  <li><a href="professional-cv.html">Profesjonalne CV</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="blogs.html">Blog</a></li>
+                  <li><a href="about-us.html">O nas</a></li>
+                  <li><a href="contact.html">Skontaktuj się z nami</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+  <div class="footer-copyright container">
+      <p>EduBridge © 2024 | Wszystkie prawa zastrzeżone |  <a href="terms-condition.html">Regulamin</a> | <a href="privacy-policy.html">Polityka Prywatności</a></p>
+  </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
