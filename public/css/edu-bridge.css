@@ -171,7 +171,7 @@ header .navbar-nav .nav-link{
     padding-top: 4rem;
 }
 .banner-bg-content{
-  background-image: url('/images/landing-banner.jpg');
+  background-image: url('../images/landing-banner.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,11 +191,10 @@ header .navbar-nav .nav-link{
 .banner-section .banner-content{
   position: relative;
   color: #ffffff;
-  display: flex
-;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: flex-end; */
+  align-items: center;
   height: 100%;
   text-align: center;
 }
@@ -222,7 +221,7 @@ header .navbar-nav .nav-link{
 .banner-section .banner-content .banner-btn-group{
     margin-top: 102px;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     gap: 45px;
     flex-wrap: wrap;
 }
