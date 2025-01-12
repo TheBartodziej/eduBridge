@@ -189,14 +189,15 @@ header .navbar-nav .nav-link{
 }
 
 .banner-section .banner-content{
-    position: relative;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100%;
-    /* text-align: center; */
+  position: relative;
+  color: #ffffff;
+  display: flex
+;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-end; */
+  height: 100%;
+  text-align: center;
 }
 
 .banner-section .banner-content .banner-content-card{
